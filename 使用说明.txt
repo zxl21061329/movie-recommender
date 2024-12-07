@@ -1,0 +1,16 @@
+
+1、后端安装
+ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
+后端启动命令：python manage.py runserver
+
+2、前端安装： 安装node-v14.19.1-x64.msi
+进入bs-frontend-template文件夹，执行安装命令： npm install
+前端启动命令：npm run dev
+
+3、访问 http://localhost:3002/
+
+管理员账号：admins
+管理员密码：admins
+
+账号 admin123
+密码 123456
