@@ -15,6 +15,7 @@ from movie_it.cache_keys import USER_CACHE, ITEM_CACHE
 from movie_it.recommend_movies import recommend_by_user_id, recommend_by_item_id
 from .forms import *
 
+from django.core.paginator import Paginator
 
 def movies_paginator(movies, page):
     paginator = Paginator(movies, 12)
@@ -391,3 +392,6 @@ def item_recommend(request):
     json_movies = [movie.to_dict(fields=['name', 'image_link', 'id', 'years', 'd_rate']) for movie in movie_list]
     random.shuffle(json_movies)
     return HttpResponse(json.dumps(json_movies[:3]), content_type="application/json")
+
+
+# 新增以下视图函数

@@ -1,12 +1,14 @@
 '''
 用户对电影的打分数据，以及对电影的评论模型的建立。
 '''
-from datetime import datetime
 from datetime import date
+from itertools import chain
+
 from django.db import models
 from django.db.models import Avg
 from django.db.models.fields.files import FileField
-from itertools import chain
+
+
 #数据库表
 class User(models.Model):
     username = models.CharField(max_length=255, unique=True, verbose_name="账号")#unique唯一（不重复）
@@ -92,6 +94,33 @@ class Movie(models.Model):
             data[f.name] = value
         return data
 
+class MovieList(models.Model):
+    name = models.CharField(max_length=255, verbose_name="影单名称")
+    description = models.TextField(verbose_name="影单简介", null=True, blank=True)
+    image_link = models.FileField(verbose_name="封面图片", max_length=255, upload_to='movie_list', null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name="创建时间")
+    # 新增字段，用于表示影单类型，默认值为“精选影单”
+    list_type = models.CharField(max_length=255, verbose_name="影单类型", default="精选影单")
+
+    class Meta:
+        verbose_name = '影单'  # 单数形式
+        verbose_name_plural = '影单列表'  # 复数形式
+
+    def __str__(self):
+        return self.name
+
+class MovieListMovies(models.Model):
+    movie_list = models.ForeignKey(MovieList, related_name='movies', on_delete=models.CASCADE)
+    movie = models.ForeignKey(Movie, related_name='movie_lists', on_delete=models.CASCADE)
+
+    class Meta:
+        unique_together = ['movie_list', 'movie']
+        verbose_name = '影单电影'  # 单数形式
+        verbose_name_plural = '影单电影列表'  # 复数形式
+
+    def __str__(self):
+        # 可以简化显示，避免过于详细的信息导致重复显示
+        return ''
 #用户对电影打分数据
 class Rate(models.Model):
     movie = models.ForeignKey(
@@ -131,3 +160,18 @@ class LikeComment(models.Model):
     class Meta:
         verbose_name = "评论点赞"
         verbose_name_plural = verbose_name
+class UserTagPreferenceDegree(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name="用户")
+    tag = models.ForeignKey(Tags, on_delete=models.CASCADE, verbose_name="标签")
+    preference_score = models.FloatField(default=0, verbose_name="偏好评分")
+    last_updated = models.DateTimeField(auto_now=True, verbose_name="最后更新时间")
+
+    class Meta:
+        verbose_name = "用户标签偏好度"
+        verbose_name_plural = "用户标签偏好度"
+        unique_together = ['user', 'tag']
+
+    def __str__(self):
+        return f"{self.user.username} - {self.tag.name}: {self.preference_score}"
+
+

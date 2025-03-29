@@ -95,3 +95,8 @@ class RegisterForm(forms.Form):
         if password1 and password2 and password1 != password2:
             raise forms.ValidationError("Password mismatch. Please enter again.")
         return password2
+
+class MovieListMoviesForm(forms.ModelForm):
+    class Meta:
+        model = MovieListMovies
+        fields = ['movie_list', 'movie']  # 确保 movie_list 字段被包含在表单中

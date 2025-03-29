@@ -1,7 +1,7 @@
 import json
 import random
 from functools import wraps
-
+from decimal import Decimal
 from django.core.cache import cache
 from django.core.paginator import Paginator
 from django.db.models import Q, Count
@@ -15,6 +15,12 @@ from movie_it.cache_keys import USER_CACHE, ITEM_CACHE
 from movie_it.recommend_movies import recommend_by_user_id, recommend_by_item_id
 from .forms import *
 from index.utils import success, error
+
+from django.http import JsonResponse
+from .models import MovieList, MovieListMovies, Movie
+
+from django.core.paginator import Paginator, EmptyPage
+
 
 
 def movies_paginator(movies, page):
@@ -107,7 +113,7 @@ def login_in(func):  # 验证用户是否登录
 
 
 def recent_movies(request):
-    new_list = Movie.objects.order_by('?')[:8]
+    new_list = Movie.objects.order_by('-years')[:8]
     return success(to_dict(new_list))
 
 
@@ -124,6 +130,7 @@ def user_recommend(request):
         # if movie_list is None:
         movie_list = recommend_by_user_id(user_id)
         cache.set(cache_key, movie_list, 60 * 5)
+        print(movie_list)
         print('设置缓存')
         # else:
         #     print('缓存命中!')
@@ -144,6 +151,7 @@ def item_recommend(request):
         # if movie_list is None:
         movie_list = recommend_by_item_id(user_id)
         cache.set(cache_key, movie_list, 60 * 5)
+        movie_list
         print('设置缓存')
         # else:
         #     print('缓存命中!')
@@ -252,28 +260,32 @@ def all_tags(request):
 
 
 def score(request, movie_id):
-    # 给电影打分 在打分的时候清除缓存
+    # 获取用户ID
     user_id = request.user_.id
-    # user = User.objects.get(id=user_id)
+
+    # 获取电影对象
     movie = Movie.objects.get(id=movie_id)
+
+    # 获取评分
     score = float(request.json.get("score"))
-    get, created = Rate.objects.get_or_create(
-        user_id=user_id, movie=movie, defaults={"mark": score})
-    if created:
-        for tag in movie.tags.all():
-            prefer, created = UserTagPrefer.objects.get_or_create(
-                user_id=user_id, tag=tag, defaults={'score': score})
-            if not created:
-                # 更新分数
-                prefer.score += (score - 3)
-                prefer.save()
-        print('create data')
-        # 清理缓存
-        user_cache = USER_CACHE.format(user_id=user_id)
-        item_cache = ITEM_CACHE.format(user_id=user_id)
-        cache.delete(user_cache)
-        cache.delete(item_cache)
-        print('cache deleted')
+
+    # 判断电影评分是否已存在
+    rate_instance = Rate.objects.filter(user_id=user_id, movie=movie).first()
+
+    if rate_instance:
+        # 如果评分已存在，则直接更新评分
+        rate_instance.mark = score
+        rate_instance.save()
+    else:
+        # 如果评分不存在，则创建新记录
+        Rate.objects.create(user_id=user_id, movie=movie, mark=score)
+
+    # 清理缓存
+    user_cache = USER_CACHE.format(user_id=user_id)
+    item_cache = ITEM_CACHE.format(user_id=user_id)
+    cache.delete(user_cache)
+    cache.delete(item_cache)
+
     return success()
 
 
@@ -347,3 +359,49 @@ def delete_rate(request, rate_id):
     return success()
 
 ############################################################################################################################################
+# 新增以下视图函数
+def movie_lists(request):
+    data = request.json
+    pagesize = data.get('pagesize', 10)
+    page = data.get('page', 1)
+    list_type = data.get('type', '')  # 获取前端传来的影单类型
+
+    movie_lists = MovieList.objects.all().prefetch_related('movies')
+
+    if list_type:  # 如果有筛选类型
+        movie_lists = movie_lists.filter(list_type=list_type)
+
+    pg = Paginator(movie_lists, pagesize)
+    try:
+        page = pg.page(page)
+    except EmptyPage:
+        return success({'total': 0, 'results': []})
+
+    results = []
+    for ml in page.object_list:
+        item = to_dict([ml])[0]
+        item['image_link'] = str(ml.image_link) if ml.image_link else ''
+        results.append(item)
+
+    return success({'total': pg.count, 'results': results})
+
+
+def movie_list_detail(request, list_id):
+    try:
+        ml = MovieList.objects.get(pk=list_id)
+        movies = [m.movie for m in ml.movies.all()]
+        result = to_dict([ml])[0]
+        result['image_link'] = str(ml.image_link) if ml.image_link else ''
+        result['movies'] = to_dict(movies)
+        for movie in result['movies']:
+            movie['image_link'] = str(movie['image_link'])
+        print("返回数据:", result)  # 添加调试输出
+        return success(result)
+    except MovieList.DoesNotExist:
+        print("影单不存在")  # 添加调试输出
+        return success({"detail": "影单未找到"})
+
+def movie_list_types(request):
+    # 获取所有去重的影单类型
+    types = MovieList.objects.values_list("list_type", flat=True).distinct()
+    return success({"types": list(types)})

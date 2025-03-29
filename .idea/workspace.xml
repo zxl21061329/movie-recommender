@@ -5,8 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d16b5231-7490-4d36-bc32-b9be47587c12" name="默认更改列表" comment="">
-      <change afterPath="$PROJECT_DIR$/开发日志.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movies.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ratings.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/movie/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie/ajax_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/movie/ajax_views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/movie/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/movie/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie/migrations/0002_user_created_time.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie/migrations/0003_auto_20200530_2235.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie/migrations/0004_auto_20210410_1253.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/movie/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/movie/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movierecomend/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/movierecomend/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movierecomend/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/movierecomend/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movierecomend/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/movierecomend/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates1/base1.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates1/base1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/开发日志.md" beforeDir="false" afterPath="$PROJECT_DIR$/开发日志.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,27 +71,49 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.admin.executor": "Run",
+    "Python.e323 (1).executor": "Run",
+    "Python.e323.executor": "Run",
+    "Python.eee.executor": "Run",
+    "Python.manage.executor": "Run",
+    "Python.models.executor": "Run",
+    "Python.t1 (1).executor": "Run",
+    "Python.t1.executor": "Run",
+    "Python.t2.executor": "Run",
+    "Python.t239.executor": "Run",
+    "Python.t3.executor": "Run",
+    "Python.t328.executor": "Run",
     "Python.testSQL.executor": "Run",
+    "Python.text.executor": "Run",
+    "Python.yy.executor": "Run",
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/movie-recommender/code/db.sqlite3",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/movie-recommender/bs-frontend-template",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "ts.external.directory.path": "C:\\Users\\Lenovo\\Desktop\\进行中\\django_电源推荐\\code1\\code\\1bs-frontend-template\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
-      "sqlite"
+      "sqlite",
+      "mysql"
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="Python.testSQL">
-    <configuration name="crawl_movie" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\movie-recommender\code\test" />
+      <recent name="D:\movie-recommender\code" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.t239">
+    <configuration name="e323 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="movie_recommand_system_vue" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -80,13 +122,59 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/movie" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/movie/e323.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="e323" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="movie_recommand_system_vue" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/e323.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="manage" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="movie_recommand_system_vue" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="D:\AncondaEnv\env\recommand\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crawl_movie.py" />
-      <option name="PARAMETERS" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
+      <option name="PARAMETERS" value="runserver" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -117,7 +205,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="testSQL" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="t239" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="movie_recommand_system_vue" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -126,12 +214,58 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testSQL.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/t239.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="t328" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="movie_recommand_system_vue" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/t328.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="yy" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="movie_recommand_system_vue" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/yy.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -164,28 +298,46 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/1bs-frontend-template/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="dev" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
+    <configuration name="movie_recommand_system_vue" type="Python.DjangoServer" factoryName="Django server">
+      <module name="movie_recommand_system_vue" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Django 服务器.movie_recommand_system_vue" />
-      <item itemvalue="npm.dev" />
       <item itemvalue="Python.manage" />
-      <item itemvalue="Python.testSQL" />
-      <item itemvalue="Python.crawl_movie" />
+      <item itemvalue="Python.t239" />
+      <item itemvalue="Python.t328" />
+      <item itemvalue="Python.yy" />
+      <item itemvalue="Python.e323" />
+      <item itemvalue="Python.e323 (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.testSQL" />
-        <item itemvalue="npm.dev" />
-        <item itemvalue="Python.crawl_movie" />
+        <item itemvalue="Python.t239" />
+        <item itemvalue="Python.t328" />
+        <item itemvalue="Python.yy" />
+        <item itemvalue="Python.e323" />
+        <item itemvalue="Python.e323 (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -220,6 +372,37 @@
       <workItem from="1733554005735" duration="1885000" />
       <workItem from="1733555955563" duration="601000" />
       <workItem from="1733556963073" duration="15375000" />
+      <workItem from="1733641374972" duration="9003000" />
+      <workItem from="1733732703843" duration="2809000" />
+      <workItem from="1733807471139" duration="6832000" />
+      <workItem from="1737299668795" duration="1054000" />
+      <workItem from="1738414090789" duration="122000" />
+      <workItem from="1738414237883" duration="1301000" />
+      <workItem from="1738415558246" duration="2241000" />
+      <workItem from="1738418858220" duration="3784000" />
+      <workItem from="1738744180080" duration="986000" />
+      <workItem from="1738747529560" duration="8499000" />
+      <workItem from="1739196620006" duration="3629000" />
+      <workItem from="1739280739176" duration="650000" />
+      <workItem from="1739281717217" duration="610000" />
+      <workItem from="1739289961086" duration="1727000" />
+      <workItem from="1739451136914" duration="6825000" />
+      <workItem from="1739521407803" duration="17044000" />
+      <workItem from="1739616712666" duration="11631000" />
+      <workItem from="1739708209423" duration="5254000" />
+      <workItem from="1742535392333" duration="3852000" />
+      <workItem from="1742539286150" duration="12346000" />
+      <workItem from="1742563415418" duration="632000" />
+      <workItem from="1742564295274" duration="4744000" />
+      <workItem from="1742571658509" duration="80000" />
+      <workItem from="1742717269223" duration="4366000" />
+      <workItem from="1742733019237" duration="2924000" />
+      <workItem from="1742825883972" duration="1690000" />
+      <workItem from="1742999115203" duration="1842000" />
+      <workItem from="1743084973430" duration="1660000" />
+      <workItem from="1743165549280" duration="7764000" />
+      <workItem from="1743178815235" duration="3227000" />
+      <workItem from="1743247206862" duration="1781000" />
     </task>
     <servers />
   </component>
@@ -227,8 +410,21 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/code$t239.coverage" NAME="t239 覆盖结果" MODIFIED="1743248323635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/code$t3.coverage" NAME="t3 覆盖结果" MODIFIED="1739454995144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/code$t1__1_.coverage" NAME="t1 (1) 覆盖结果" MODIFIED="1742537755476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/movie" />
     <SUITE FILE_PATH="coverage/movie_recommand_system_vue$crawl_movie.coverage" NAME="crawl_movie Coverage Results" MODIFIED="1678202786017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/code$text.coverage" NAME="text 覆盖结果" MODIFIED="1738758989944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/code$e323__1_.coverage" NAME="e323 (1) 覆盖结果" MODIFIED="1742718536814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/movie" />
+    <SUITE FILE_PATH="coverage/code$eee.coverage" NAME="eee 覆盖结果" MODIFIED="1742564982452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/code$admin.coverage" NAME="admin 覆盖结果" MODIFIED="1739525561358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/movie" />
+    <SUITE FILE_PATH="coverage/code$t328.coverage" NAME="t328 覆盖结果" MODIFIED="1743248306094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/code$t2.coverage" NAME="t2 覆盖结果" MODIFIED="1739281723950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/code$e323.coverage" NAME="e323 覆盖结果" MODIFIED="1742718646203" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/code$testSQL.coverage" NAME="testSQL 覆盖结果" MODIFIED="1733572590589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/code$manage.coverage" NAME="manage Coverage Results" MODIFIED="1685417344829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/code$t1.coverage" NAME="t1 覆盖结果" MODIFIED="1739281637618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/code$models.coverage" NAME="models 覆盖结果" MODIFIED="1742564393673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/movie" />
+    <SUITE FILE_PATH="coverage/code$manage.coverage" NAME="manage 覆盖结果" MODIFIED="1743178825679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/code$yy.coverage" NAME="yy 覆盖结果" MODIFIED="1743222521953" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
   </component>
 </project>

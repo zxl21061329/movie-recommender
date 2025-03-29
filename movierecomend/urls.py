@@ -47,9 +47,15 @@ urlpatterns = [
         path("delete_comment/<int:comment_id>",
              views.delete_comment, name="delete_comment"),
         path("delete_rate/<int:rate_id>", views.delete_rate, name="delete_rate"),
-        path('choose_tags/', views.choose_tags)
+        path('choose_tags/', views.choose_tags),
+        path("movie_lists/", views.movie_lists, name="movie_lists"),
+        path("movie_list/<int:list_id>/", views.movie_list_detail, name="movie_list_detail"),
+        path('movie_list_types/', views.movie_list_types, name='movie_list_types'),
+
     ])),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS)
+
+
 
 admin.site.site_header = '推荐系统后台管理'
 admin.site.index_title = '首页-推荐系统'
